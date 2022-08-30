@@ -18,7 +18,11 @@ However it is slightly modified to account for the new **+page.server.js** and *
  * Data is in format of: **[{"_id":"6306cf64e003b011330d56e1","brand":"Audi","mileage":2000}, ...}]**
 
  ### Key Concepts
- * Folder Structure 
+ **Folder Structure** 
+
+ * **lib/db.ts**            -- Handle connection to DB.
+ * **routes/page.server.ts** -- Make request to DB using imported Handle, and store result into prop named JSON.stringify(**cars**).
+ * **routes/page.svelte**    -- Accesses response data through JSON.parsed(**data.cars**)
 
  <pre>
  ├── src/

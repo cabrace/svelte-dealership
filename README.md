@@ -1,4 +1,5 @@
-# A Svelte/MongoDB setup
+
+ # A Svelte/MongoDB setup
 
 Main notes taken from [How to create a SvelteKit and MongoDB app.](https://awstip.com/how-to-create-a-svelte-kit-and-mongodb-app-63de01c6ff71)
 However it is slightly modified to account for the new **+page.server.js** and **+page.svelte** naming conventions where routing is now stored in its corresponding
@@ -13,7 +14,11 @@ However it is slightly modified to account for the new **+page.server.js** and *
  * Data is in format of: **[{"_id":"6306cf64e003b011330d56e1","brand":"Audi","mileage":2000}, ...}]**
 
  ### Key Concepts
- * Folder Structure 
+ **Folder Structure** 
+
+ * **lib/db.ts**            -- Handle connection to DB.
+ * **routes/page.server.ts** -- Make request to DB using imported Handle, and store result into prop named JSON.stringify(**cars**).
+ * **routes/page.svelte**    -- Accesses response data through JSON.parsed(**data.cars**)
 
  <pre>
  ├── src/
@@ -56,3 +61,4 @@ However it is slightly modified to account for the new **+page.server.js** and *
     * and to access the 'cars' prop we created we access it like **data.cars**. the name **data** seems to be the default name and required**.
     * note that we called **JSON.stringify(cars)** in +page.server.js as it was important for the ObjectId returned by mongo and the corresponding **JSON.parse(data.cars)**
     * to access the data as string formatted content
+
