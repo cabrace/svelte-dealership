@@ -1,38 +1,15 @@
-# create-svelte
+# My first Svelte/MongoDB setup
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Main notes taken from ['How to create a SvelteKit and MongoDB app.'](https://awstip.com/how-to-create-a-svelte-kit-and-mongodb-app-63de01c6ff71)
+However it is slightly modified to account for the new +page.svelte naming conventions where routing is now stored in its corresponding
+folder name structure.
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Notes on this project
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
 
 ## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+`npm run dev`
 
 ## Building
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
