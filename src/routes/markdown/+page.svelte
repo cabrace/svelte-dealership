@@ -1,4 +1,9 @@
-# A Svelte/MongoDB setup
+<script>
+import SMarkdown from 'svelte-markdown'
+
+ const source = `
+ 
+ # A Svelte/MongoDB setup
 
 Main notes taken from [How to create a SvelteKit and MongoDB app.](https://awstip.com/how-to-create-a-svelte-kit-and-mongodb-app-63de01c6ff71)
 However it is slightly modified to account for the new **+page.server.js** and **+page.svelte** naming conventions where routing is now stored in its corresponding
@@ -56,3 +61,7 @@ However it is slightly modified to account for the new **+page.server.js** and *
     * and to access the 'cars' prop we created we access it like **data.cars**. the name **data** seems to be the default name and required**.
     * note that we called **JSON.stringify(cars)** in +page.server.js as it was important for the ObjectId returned by mongo and the corresponding **JSON.parse(data.cars)**
     * to access the data as string formatted content
+`
+</script>
+
+<SMarkdown {source} />

@@ -32,6 +32,7 @@
 	"dependencies": {
 		"dotenv": "^16.0.1",
 		"mongodb": "^4.9.0",
-		"superjson": "^1.9.1"
+		"superjson": "^1.9.1",
+		"svelte-markdown": "^0.2.3"
 	}
 }
