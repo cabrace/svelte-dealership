@@ -16,9 +16,9 @@ However it is slightly modified to account for the new **+page.server.js** and *
  ### Key Concepts
  **Folder Structure** 
 
- * **lib/db.ts**            -- Handle connection to DB.
+ * **lib/db.ts**             -- Handle connection to DB.
  * **routes/page.server.ts** -- Make request to DB using imported Handle, and store result into prop named JSON.stringify(**cars**).
- * **routes/page.svelte**    -- Accesses response data through JSON.parsed(**data.cars**)
+ * **routes/page.svelte**    -- Access response data through JSON.parsed(**data.cars**) and display onto page.
 
  <pre>
  ├── src/
