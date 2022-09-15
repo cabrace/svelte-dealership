@@ -1,15 +1,17 @@
-import db from "$lib/db"
+import db from "$lib/dashboard_db"
+import { ObjectId } from 'mongodb';
 // import superjson from 'superjson';
 
 export async function load() {
 
   /* const cars = await db.collection('cars').find(); */
-  const cars = await db.collection('cars').find({}).toArray();
+  const networks = await db.collection('domainData').find({}).project({ _id: 0}).toArray();
 
   /* const data = [{"brand":"Volvo", "mileage":"123"},{"brand":"Honda", "mileage":"1234"},{"brand":"Audi", "mileage":"1235"}] */
   return {
     status: 200,
-    cars: JSON.stringify(cars)
+    networks: JSON.stringify(networks)
+    // cars: JSON.stringify(cars,null,2)
   }
 }
 
