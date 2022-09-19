@@ -15,6 +15,15 @@ export async function load() {
   }
 }
 
+export async function getAPIData(){
+  // const networks = await db.collection('domainData').find({}).project({ _id: 0}).toArray();
+  return {
+    status: 200,
+    api: "Data"
+    // cars: JSON.stringify(cars,null,2)
+  }
+}
+
 export async function POST({ request, setHeaders, url }) {
   const values = await request.formData();
 
