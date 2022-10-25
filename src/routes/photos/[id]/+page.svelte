@@ -8,6 +8,7 @@
 
   console.log(photo)
   console.log("[id]/+page.svelte")
+
 </script>
 
 <h1>Photo {$page.params.id}</h1>
